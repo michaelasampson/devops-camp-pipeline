@@ -51,8 +51,7 @@ pipeline {
                         }
                     }
                 }
-            }
-            
+            }  
         }
         stage('Database docker build') {
             steps {
@@ -68,7 +67,7 @@ pipeline {
                     }
                 }
             }
-            }
+            
             //TODO("Lab 4 - Artifact Management"): clean local docker db image
             post {
                 always {
@@ -98,3 +97,4 @@ pipeline {
             sh 'rm -rf .git ./*'
         }
     }
+}
